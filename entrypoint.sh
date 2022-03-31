@@ -134,7 +134,7 @@ main() {
       fail 'Failed s3cmd command';
   fi
   
-  if [ -z "$S3CMD_NO_CACHE_INDEX_HTML" ]; then
+  if [ -n "$S3CMD_NO_CACHE_INDEX_HTML" ]; then
       command= "s3cmd modify --add-header='Cache-Control: no-cache' s3://$AWS_S3_BUCKET/index.html"
 
       debug $command
