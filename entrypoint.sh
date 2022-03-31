@@ -135,11 +135,11 @@ main() {
   fi
   
   if [ -n "$S3CMD_NO_CACHE_INDEX_HTML" ]; then
-      command= "s3cmd modify --add-header='Cache-Control: no-cache' s3://$AWS_S3_BUCKET/index.html"
+      mod_command="s3cmd modify --add-header='Cache-Control: no-cache' s3://$AWS_S3_BUCKET/index.html"
 
-      debug $command
+      debug $mod_command
 
-      bash -c $command
+      bash -c $mod_command
       RESULT=$?
 
       if [[ $? -eq 0 ]]; then
