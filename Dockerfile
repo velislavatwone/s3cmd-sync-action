@@ -1,4 +1,4 @@
-FROM python:3.10.5-slim
+FROM python:3.10.5-alpine
 
 LABEL "com.github.actions.name"="s3cmd sync action"
 LABEL "com.github.actions.description"="Sync a dir with S3 bucket using s3cmd with options invalidate CloudFront files and cache-control max-age"
